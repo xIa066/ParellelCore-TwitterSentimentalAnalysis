@@ -1,0 +1,26 @@
+#README
+#FOR THE RECORD: I'm offended by not providing a readme meta file for json data :). This file is done by manually eyeballing data
+
+tinyTwitter.json file
+'total_rows' : number of tweets
+'offset' : ??NOT SURE
+'rows': a list of rows, each row represent a tweet, contains the following attributes
+	['id', 'key', 'value', 'doc']
+	- 'id': the identifier i.e. 'id': '518357110229590016'
+	- 'key': ??NOT SURE i.e. 'key': ['r1r0dbzqtuxv', 2014, 10, 4]
+	- 'value':
+	['type', 'geometry', 'properties']
+		- 'geometry':
+		['type', 'coordinates']
+		- 'properties':
+		['created_at', 'text', 'location']
+
+	- 'doc': has 27 attributes (DON'T LOOK INTO IT, IGNORE FOR THIS ASSIGNMENT1)
+
+### OK, WE ONLY NEED 
+
+>>> JASON_DATA['rows'][SLICING_INDEX]['value']['geometry']['coordinates']
+ # this return a list of coordinates
+
+>>> JASON_DATA['rows'][SLICING_INDEX]['value']['properties']['text']
+ # this return a string of tweet
